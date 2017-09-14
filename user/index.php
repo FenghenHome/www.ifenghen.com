@@ -20,6 +20,12 @@ $all_transfer = round($all_transfer,2);
 $unused_transfer = round($unused_transfer,2);
 //最后在线时间
 $unix_time = $oo->get_last_unix_time();
+$expire_time = $oo->get_expire_time();
+$now_time = date("Ymd");
+$show_expire_time = date("Y",strtotime("$expire_time"))."年".date("m",strtotime("$expire_time"))."月".date("d",strtotime("$expire_time"))."日";
+$unix_now_time = strtotime($now_time);
+$unix_expire_time = strtotime($expire_time);
+$show_unused_time = round(($unix_expire_time-$unix_now_time)/3600/24);
 ?>
 
     <!-- =============================================== -->
@@ -63,8 +69,17 @@ $unix_time = $oo->get_last_unix_time();
                                 </div>
                             </div>
                             <p> 可用流量：<?php echo $all_transfer ."GB";?> </p>
-                            <p> 剩余流量：<?php echo  $unused_transfer."GB";?> </p>
-                            <p> 到期时间：<?php echo $oo->get_expire_time();?> </p>
+                            <p> 剩余流量：<code><?php echo  $unused_transfer."GB";?></code> </p>
+                            <p> 到期时间：<?php echo $show_expire_time;?> </p>
+                            <p> 剩余时间：<code>
+<?php
+if ($unix_expire_time-$unix_now_time >= "1"){
+    echo $show_unused_time."天";
+} else {
+    echo "已过期";
+}
+?>
+                            </code> </p>
                         </div><!-- /.box-body -->
                     </div><!-- /.box -->
                 </div><!-- /.col (left) -->
@@ -72,13 +87,12 @@ $unix_time = $oo->get_last_unix_time();
                 <div class="col-md-6">
                     <div class="box box-solid">
                         <div class="box-header">
-                            <h3 class="box-title">套餐使用情况</h3>
+                            <h3 class="box-title">套餐情况</h3>
                         </div><!-- /.box-header -->
                         <div class="box-body">
-                            <p> 当前套餐：<?php echo $oo->get_plan();?> </p>
-                            <p> 套餐A：</p>
-                            <p> 套餐B：</p>
-                            <p> 套餐C：</p>
+                            <p> 当前套餐：<code><?php echo $oo->get_plan();?></code> </p>
+                            <p> 套餐A：<code>普通节点+增强节点</code></p>
+                            <p> 套餐B：<code>普通节点</code></p>
                         </div><!-- /.box-body -->
                     </div><!-- /.box -->
                 </div><!-- /.col (left) -->

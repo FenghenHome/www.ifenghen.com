@@ -32,7 +32,7 @@ $Users = new Ss\User\User();
                                     <th>是否启用</th>
                                     <th>套餐</th>
                                     <th>到期时间</th>
-                                    <th>最后签到</th>
+                                    <th>剩余时间</th>
                                     <th>邀请人</th>
                                     <th>操作</th>
                                 </tr>
@@ -47,10 +47,39 @@ $Users = new Ss\User\User();
                                         <td><?php \Ss\Etc\Comm::flowAutoShow($rs['transfer_enable']); ?></td>
                                         <td><?php \Ss\Etc\Comm::flowAutoShow(($rs['transfer_enable']-$rs['u']-$rs['d'])); ?></td>
                                         <td><?php \Ss\Etc\Comm::flowAutoShow(($rs['u']+$rs['d'])); ?></td>
-                                        <td><?php echo $rs['enable']; ?></td>
+                                        <td>
+<?php
+$user_plan = $rs['enable'];
+if ($user_plan == "1"){
+    $show_plan = "启用";
+} else {
+    $show_plan = "禁用";
+}
+echo $show_plan;
+?>
+                                        </td>
                                         <td><?php echo $rs['plan']; ?></td>
-                                        <td><?php echo $rs['expire_time']; ?></td>
-                                        <td><?php echo date('Y-m-d H:i:s',$rs['last_check_in_time']); ?></td>
+                                        <td>
+<?php
+$user_expire_time = $rs['expire_time'];
+$show_expire_time = date("Y",strtotime("$user_expire_time"))."年".date("m",strtotime("$user_expire_time"))."月".date("d",strtotime("$user_expire_time"))."日";
+echo $show_expire_time;
+?>
+                                        </td>
+                                        <td>
+<?php
+$now_time = date("Ymd");
+$unix_now_time = strtotime($now_time);
+$user_expire_time = $rs['expire_time'];
+$unix_expire_time = strtotime($user_expire_time);
+$show_unused_time = round(($unix_expire_time-$unix_now_time)/3600/24);
+if ($unix_expire_time-$unix_now_time >= "1"){
+echo $show_unused_time."天";
+} else {
+echo "已过期";
+}
+?>
+                                        </td>
                                         <td>
 <?php 
 if ( $rs['ref_by'] != 0 ){
