@@ -91,8 +91,8 @@ if ($unix_expire_time-$unix_now_time >= "1"){
                         </div><!-- /.box-header -->
                         <div class="box-body">
                             <p> 当前套餐：<code><?php echo $oo->get_plan();?></code> </p>
-                            <p> 套餐A：<code>普通节点+增强节点</code></p>
-                            <p> 套餐B：<code>普通节点</code></p>
+                            <p> 套餐A：<code>可以使用普通节点和增强节点</code></p>
+                            <p> 套餐B：<code>只能使用普通节点</code></p>
                         </div><!-- /.box-body -->
                     </div><!-- /.box -->
                 </div><!-- /.col (left) -->

@@ -28,7 +28,7 @@ if(!$code->IsCodeOk()){
     // get value
     $ref_by = $code->GetCodeUser();
     $passwd = \Ss\User\Comm::SsPW($passwd);
-    $plan = "A";
+    $plan = "B";
     $transfer = $a_transfer;
     $invite_num = rand($user_invite_min,$user_invite_max);
     $expire_time = date("Ymd",(strtotime('+3 month')));
