@@ -50,6 +50,11 @@ class Ss {
         return $this->get_user_info_array()['expire_time'];
     }
 
+    //返回Enable
+    function  get_enable(){
+        return $this->get_user_info_array()['enable'];
+    }
+
     //返回transfer_enable
     function  get_transfer_enable(){
         return $this->get_user_info_array()['transfer_enable'];

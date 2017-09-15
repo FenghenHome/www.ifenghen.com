@@ -59,7 +59,7 @@ $show_unused_time = round(($unix_expire_time-$unix_now_time)/3600/24);
                 <div class="col-md-6">
                     <div class="box box-solid">
                         <div class="box-header">
-                            <h3 class="box-title">流量使用情况</h3>
+                            <h3 class="box-title">账号情况</h3>
                         </div><!-- /.box-header -->
                         <div class="box-body">
                             <p> 已用流量：<?php echo $transfers."MB";?> </p>
@@ -78,6 +78,17 @@ if ($unix_expire_time-$unix_now_time >= "1"){
 } else {
     echo "已过期";
 }
+?>
+                            </code> </p>
+			    <p> 账号状态：<code>
+<?php
+$user_enable = $oo->get_enable();
+if ($user_enable == "1"){
+    $show_enable = "启用";
+} else {
+    $show_enable = "禁用";
+}
+echo $show_enable;
 ?>
                             </code> </p>
                         </div><!-- /.box-body -->

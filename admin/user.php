@@ -49,13 +49,13 @@ $Users = new Ss\User\User();
                                         <td><?php \Ss\Etc\Comm::flowAutoShow(($rs['u']+$rs['d'])); ?></td>
                                         <td>
 <?php
-$user_plan = $rs['enable'];
-if ($user_plan == "1"){
-    $show_plan = "启用";
+$user_enable = $rs['enable'];
+if ($user_enable == "1"){
+    $show_enable = "启用";
 } else {
-    $show_plan = "禁用";
+    $show_enable = "禁用";
 }
-echo $show_plan;
+echo $show_enable;
 ?>
                                         </td>
                                         <td><?php echo $rs['plan']; ?></td>
