@@ -89,7 +89,7 @@ if(!empty($_POST)){
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_order">排序</label>
+                                <label for="cate_order">排序（对应usermysql.json中node_id）</label>
                                 <input   class="form-control" name="node_order"  value="<?php echo $rs['node_order'];?>" >
                             </div>
                         </div><!-- /.box-body -->
