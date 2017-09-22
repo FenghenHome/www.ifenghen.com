@@ -30,6 +30,7 @@ $node = new Ss\Node\Node();
                                     <th>加密</th>
                                     <th>协议</th>
                                     <th>混淆</th>
+                                    <th>人数</th>
                                     <th>描述</th>
                                     <th>排序</th>
                                     <th>操作</th>
@@ -45,6 +46,7 @@ $node = new Ss\Node\Node();
                                         <td> <?php echo $rs['node_method']; ?></td>
                                         <td> <?php echo $rs['node_protocol']; ?></td>
                                         <td> <?php echo $rs['node_obfs']; ?></td>
+                                        <td><?php echo $rs['node_online']; ?></td>
                                         <td><?php echo $rs['node_info']; ?></td>
                                         <td><?php echo $rs['node_order']; ?></td>
                                         <td>
