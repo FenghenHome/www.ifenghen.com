@@ -79,7 +79,7 @@ if(!empty($_POST)){
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_order">分类(Ord代表普通节点)(Pro代表增强节点)</label>
+                                <label for="cate_order">分类(Ord、Pro、Vip)</label>
                                 <input   class="form-control" name="node_type"  value="<?php echo $rs['node_type'];?>" >
                             </div>
 

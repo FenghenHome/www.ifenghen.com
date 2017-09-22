@@ -47,6 +47,7 @@ $show_unused_time = round(($unix_expire_time-$unix_now_time)/3600/24);
                 <div class="col-md-6">
                     <div class="box box-solid">
                         <div class="box-header">
+                            <i class="fa fa-th-list"></i>
                             <h3 class="box-title">公告&FAQ</h3>
                         </div><!-- /.box-header -->
                         <div class="box-body">
@@ -59,6 +60,7 @@ $show_unused_time = round(($unix_expire_time-$unix_now_time)/3600/24);
                 <div class="col-md-6">
                     <div class="box box-solid">
                         <div class="box-header">
+                            <i class="fa fa-th-list"></i>
                             <h3 class="box-title">账号情况</h3>
                         </div><!-- /.box-header -->
                         <div class="box-body">
@@ -98,12 +100,13 @@ echo $show_enable;
                 <div class="col-md-6">
                     <div class="box box-solid">
                         <div class="box-header">
+                            <i class="fa fa-th-list"></i>
                             <h3 class="box-title">套餐情况</h3>
                         </div><!-- /.box-header -->
                         <div class="box-body">
                             <p> 当前套餐：<code><?php echo $oo->get_plan();?></code> </p>
-                            <p> 套餐A：<code>可以使用普通节点和增强节点</code></p>
-                            <p> 套餐B：<code>只能使用普通节点</code></p>
+                            <p> A：<code>可以使用普通节点+增强节点</code></p>
+                            <p> B：<code>只能使用普通节点</code></p>
                         </div><!-- /.box-body -->
                     </div><!-- /.box -->
                 </div><!-- /.col (left) -->
@@ -111,6 +114,7 @@ echo $show_enable;
                 <div class="col-md-6">
                     <div class="box box-solid">
                         <div class="box-header">
+                            <i class="fa fa-th-list"></i>
                             <h3 class="box-title">签到获取流量</h3>
                         </div><!-- /.box-header -->
                         <div class="box-body">
@@ -130,12 +134,14 @@ echo $show_enable;
                 <div class="col-md-6">
                     <div class="box box-solid">
                         <div class="box-header">
+                            <i class="fa fa-th-list"></i>
                             <h3 class="box-title">联系方式</h3>
                         </div><!-- /.box-header -->
                         <div class="box-body">
                             <p> 邮箱：<a href="mailto:s.sunfeihu@gmail.com" rel="nofollow" target="_blank">s.sunfeihu@gmail.com</a></p>
                             <p> Telegram：<a href="https://t.me/fenghen" rel="nofollow" target="_blank">https://t.me/fenghen</a></p>
                             <p> Telegram交流群：<a href="https://t.me/ifenghen" rel="nofollow" target="_blank">https://t.me/ifenghen</a></p>
+                            <p> Telegram下载：<a href="https://telegram.cn.uptodown.com/android/download" rel="nofollow" target="_blank">https://telegram.cn.uptodown.com/android/download</a></p>
                         </div><!-- /.box-body -->
                     </div><!-- /.box -->
                 </div><!-- /.col (left) -->
@@ -143,6 +149,7 @@ echo $show_enable;
                 <div class="col-md-6">
                     <div class="box box-solid">
                         <div class="box-header">
+                            <i class="fa fa-th-list"></i>
                             <h3 class="box-title">续费</h3>
                         </div><!-- /.box-header -->
                         <div class="box-body">
