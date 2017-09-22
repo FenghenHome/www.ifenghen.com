@@ -30,7 +30,7 @@ $node = new Ss\Node\Node();
                                     <th>加密</th>
                                     <th>协议</th>
                                     <th>混淆</th>
-                                    <th>人数</th>
+                                    <th>在线</th>
                                     <th>描述</th>
                                     <th>排序</th>
                                     <th>操作</th>
