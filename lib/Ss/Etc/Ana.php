@@ -53,6 +53,11 @@ class Ana extends Db {
         return $c;
     }
 
+    function nodeonlineCount(){
+        $nodeonline = $this->db->sum("ss_node","node_online");
+        return $nodeonline;
+    }
+
     function nodeCount(){
         $c = $this->db->count("ss_node","id");
         return $c;

@@ -7,6 +7,7 @@ $mt = round($mt,3);
 $active_user = $ssmin->activedUserCount();
 $all_user = $ssmin->allUserCount();
 $node_count = $ssmin->nodeCount();
+$node_online = $ssmin->nodeonlineCount();
 ?>
 
     <!-- =============================================== -->
@@ -70,10 +71,10 @@ $node_count = $ssmin->nodeCount();
                     <div class="small-box bg-aqua">
                         <div class="inner">
                             <h3>
-                                <?php  echo $all_user; ?>
+                                <?php  echo $all_user; ?>(<?php  echo $node_online; ?>)
                             </h3>
                             <p>
-                                用户
+                                用户(在线)
                             </p>
                         </div>
                         <div class="icon">
