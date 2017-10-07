@@ -42,7 +42,9 @@ $ssqr = "ssr://".$url;
 <tr><td>Windows 游戏客户端</td><td><a href="https://www.sockscap64.com/sstap/" rel="nofollow" target="_blank">下载</a></td><td><a href="https://i.loli.net/2017/10/07/59d8ef915181c.png" rel="nofollow" target="_blank">教程</a></td></tr>
 <tr><td>iOS 客户端</td><td><a href="https://www.25pp.com/ios/detail_1923429" rel="nofollow" target="_blank">下载</a></td><td><a href="https://i.loli.net/2017/10/07/59d8f3cda6710.png" rel="nofollow" target="_blank">教程</a></td></tr>
 <tr><td>Mac OS X 客户端</td><td><a href="https://github.com/FenghenHome/breakwa11.github.io/raw/master/download/ShadowsocksX-NG-R8.dmg" rel="nofollow" target="_blank">下载</a></td><td><a href="https://i.loli.net/2017/10/07/59d8efe79a9cb.png" rel="nofollow" target="_blank">教程</a></td></tr>
-<tr><td>OpenWrt 客户端</td><td><a href="https://github.com/FenghenHome/breakwa11.github.io/raw/master/download/luci-app-shadowsocksR-GFW_1.2.5_all.ipk" rel="nofollow" target="_blank">下载</a></td></tr>
+<tr><td>OpenWrt 15.05(ar71xx) 客户端</td><td><a href="https://github.com/FenghenHome/breakwa11.github.io/raw/master/download/luci-app-shadowsocksR-GFW_1.2.5_all.ipk" rel="nofollow" target="_blank">下载</a></td></tr>
+<tr><td>OpenWrt 15.05(ramips) 客户端</td><td><a href="#" rel="nofollow" target="_blank">暂无</a></td></tr>
+<tr><td>LEDE 客户端</td><td><a href="#" rel="nofollow" target="_blank">暂无</a></td></tr>
 <tr><td>avege 多平台客户端</td><td><a href="https://github.com/avege/avege/releases" rel="nofollow" target="_blank">下载</a></td></tr>
 <tr><td>electron-ssr 多平台客户端</td><td><a href="https://github.com/erguotou520/electron-ssr/releases" rel="nofollow" target="_blank">下载</a></td></tr>
 <tr><td>Shadowrocket IPA Cracked</td><td><a href="https://www.iphonecake.com/app_932747118_.html" rel="nofollow" target="_blank">下载</a></td><td><a href="https://i.loli.net/2017/10/07/59d8f3cda6710.png" rel="nofollow" target="_blank">教程</a></td></tr>
