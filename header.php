@@ -6,7 +6,7 @@
     <title><?php echo $site_name; ?></title> 
     <!-- CSS fonts.cat.net -->
     <link href="//fonts.cat.net/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://cdn.staticfile.org/materialize/0.97.8/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="https://cdn.bootcss.com/materialize/0.97.8/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="asset/materialize/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
