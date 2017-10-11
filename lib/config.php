@@ -31,7 +31,7 @@ $check_min = 1;
 $check_max = 10;
 
 //name
-$site_name = "风痕加速";
+$site_name = "New World";
 $site_url  = "https://www.ifenghen.com/";
 /**
  * 站点盐值，用于加密密码
