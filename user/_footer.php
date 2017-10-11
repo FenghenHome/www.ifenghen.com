@@ -7,7 +7,7 @@
         ?>
     </div>
     <strong>Copyright &copy; 2014-<?php echo date('Y'); ?> <a href="#"><?php echo $site_name;  ?></a> </strong>
-            All rights reserved.  Powered by  <b>风痕之家</b><?php echo $version; ?>
+            All rights reserved.  Powered by  <b>New World</b><?php echo $version; ?>
 </footer>
 </div><!-- ./wrapper -->
 <?php
