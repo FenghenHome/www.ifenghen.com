@@ -1,6 +1,5 @@
 <?php
 /**
- * User Shadowsocks  info Class
  * @author  orvice <orvice@gmail.com>
  */
 namespace Ss\User;
