@@ -13,7 +13,7 @@ require_once '../lib/config.php';
     <link href="https://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <!-- Theme style -->
     <link href="../asset/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
-    <link href="../asset/css/blue.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.bootcss.com/iCheck/1.0.1/skins/square/blue.css" rel="stylesheet" type="text/css" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
