@@ -141,7 +141,7 @@ echo $show_enable;
                             <p> 邮箱：<a href="mailto:s.sunfeihu@gmail.com" rel="nofollow" target="_blank">s.sunfeihu@gmail.com</a></p>
                             <p> Telegram：<a href="https://t.me/fenghen" rel="nofollow" target="_blank">https://t.me/fenghen</a></p>
                             <p> Telegram交流群：<a href="https://t.me/ifenghen" rel="nofollow" target="_blank">https://t.me/ifenghen</a></p>
-                            <p> Telegram下载：<a href="https://cnhv.co/504b" rel="nofollow" target="_blank">https://cnhv.co/504b</a></p>
+                            <p> Telegram下载：<a href="https://apkpure.com/cn/telegram/org.telegram.messenger" rel="nofollow" target="_blank">https://apkpure.com/cn/telegram/org.telegram.messenger</a></p>
                         </div><!-- /.box-body -->
                     </div><!-- /.box -->
                 </div><!-- /.col (left) -->
