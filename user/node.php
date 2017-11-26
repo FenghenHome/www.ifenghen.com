@@ -36,7 +36,7 @@ $port = $oo->get_port();
                                 <div class="nav-tabs-custom">
                                     <ul class="nav nav-tabs pull-right">
                                         <li class="pull-left header"><i class="fa fa-angle-right"></i> <?php echo $row['node_name']; ?></li>
-										<a class="btn btn-xs bg-orange btn-flat margin" target="_blank" href="node_qr.php?id=<?php echo $row['id']; ?>">二维码</a>
+										<a class="btn btn-xs bg-orange btn-flat margin" target="_blank" href="node_qr.php?id=<?php echo $row['id']; ?>">配置信息</a>
 										<a class="btn btn-xs bg-purple btn-flat margin" href="#">状态:</a> <code><?php echo $row['node_status']; ?></code>
 										<a class="btn btn-xs bg-purple btn-flat margin" href="#">在线:</a> <code><?php echo $row['node_online']; ?></code>
 										<a class="btn btn-xs bg-purple btn-flat margin" href="#">描述:</a> <code><?php echo $row['node_info']; ?></code>
@@ -61,7 +61,7 @@ $port = $oo->get_port();
                                 <div class="nav-tabs-custom">
                                     <ul class="nav nav-tabs pull-right">
                                         <li class="pull-left header"><i class="fa fa-angle-right"></i> <?php echo $row['node_name']; ?></li>
-										<a class="btn btn-xs bg-orange btn-flat margin" target="_blank" href="node_qr.php?id=<?php echo $row['id']; ?>">二维码</a>
+										<a class="btn btn-xs bg-orange btn-flat margin" target="_blank" href="node_qr.php?id=<?php echo $row['id']; ?>">配置信息</a>
 										<a class="btn btn-xs bg-purple btn-flat margin" href="#">状态:</a> <code><?php echo $row['node_status']; ?></code>
 										<a class="btn btn-xs bg-purple btn-flat margin" href="#">在线:</a> <code><?php echo $row['node_online']; ?></code>
 										<a class="btn btn-xs bg-purple btn-flat margin" href="#">描述:</a> <code><?php echo $row['node_info']; ?></code>
@@ -86,7 +86,7 @@ $port = $oo->get_port();
                                 <div class="nav-tabs-custom">
                                     <ul class="nav nav-tabs pull-right">
                                         <li class="pull-left header"><i class="fa fa-angle-right"></i> <?php echo $row['node_name']; ?></li>
-										<a class="btn btn-xs bg-orange btn-flat margin" target="_blank" href="node_qr.php?id=<?php echo $row['id']; ?>">登录</a>
+										<a class="btn btn-xs bg-orange btn-flat margin" target="_blank" href="node_qr.php?id=<?php echo $row['id']; ?>">配置信息</a>
 										<a class="btn btn-xs bg-purple btn-flat margin" href="#">状态:</a> <code><?php echo $row['node_status']; ?></code>
 										<a class="btn btn-xs bg-purple btn-flat margin" href="#">在线:</a> <code><?php echo $row['node_online']; ?></code>
 										<a class="btn btn-xs bg-purple btn-flat margin" href="#">描述:</a> <code><?php echo $row['node_info']; ?></code>
