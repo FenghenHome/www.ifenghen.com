@@ -38,7 +38,6 @@ namespace Ss\Node;
 
      function NodesArray($node_type){
          $node_array = $this->db->select("ss_node","*",[
-             "node_type[=]" => $node_type,
              "AND" => [
                  "node_type[=]" => $node_type,
                  "node_status[=]" => 1
