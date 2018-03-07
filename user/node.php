@@ -36,8 +36,8 @@ $port = $oo->get_port();
                                 <div class="nav-tabs-custom">
                                     <ul class="nav nav-tabs pull-right">
                                         <li class="pull-left header"><i class="fa fa-angle-right"></i> <?php echo $row['node_name']; ?></li>
-										<a class="btn btn-xs bg-orange btn-flat margin" target="_blank" href="node_qr.php?id=<?php echo $row['id']; ?>">配置信息</a>
-										<a class="btn btn-xs bg-purple btn-flat margin" href="#">状态:</a> <code><?php echo $row['node_status']; ?></code>
+										<a class="btn btn-xs bg-orange btn-flat margin" target="_blank" href="node_qr.php?id=<?php echo $row['id']; ?>">配置</a>
+										<a class="btn btn-xs bg-orange btn-flat margin" target="_blank" href="https://stats.uptimerobot.com/36QKXSxwN">状态</a>
 										<a class="btn btn-xs bg-purple btn-flat margin" href="#">在线:</a> <code><?php echo $row['node_online']; ?></code>
 										<a class="btn btn-xs bg-purple btn-flat margin" href="#">描述:</a> <code><?php echo $row['node_info']; ?></code>
                                     </ul>
@@ -61,8 +61,8 @@ $port = $oo->get_port();
                                 <div class="nav-tabs-custom">
                                     <ul class="nav nav-tabs pull-right">
                                         <li class="pull-left header"><i class="fa fa-angle-right"></i> <?php echo $row['node_name']; ?></li>
-										<a class="btn btn-xs bg-orange btn-flat margin" target="_blank" href="node_qr.php?id=<?php echo $row['id']; ?>">配置信息</a>
-										<a class="btn btn-xs bg-purple btn-flat margin" href="#">状态:</a> <code><?php echo $row['node_status']; ?></code>
+										<a class="btn btn-xs bg-orange btn-flat margin" target="_blank" href="node_qr.php?id=<?php echo $row['id']; ?>">配置</a>
+										<a class="btn btn-xs bg-orange btn-flat margin" target="_blank" href="https://stats.uptimerobot.com/36QKXSxwN">状态</a>
 										<a class="btn btn-xs bg-purple btn-flat margin" href="#">在线:</a> <code><?php echo $row['node_online']; ?></code>
 										<a class="btn btn-xs bg-purple btn-flat margin" href="#">描述:</a> <code><?php echo $row['node_info']; ?></code>
                                     </ul>
@@ -76,7 +76,7 @@ $port = $oo->get_port();
                     <div class="box box-solid">
                         <div class="box-header">
                             <i class="fa fa-th-list"></i>
-                            <h3 class="box-title">Vip节点</h3>
+                            <h3 class="box-title">高级节点</h3>
                         </div><!-- /.box-header -->
                         <div class="box-body">
                             <?php
@@ -86,8 +86,8 @@ $port = $oo->get_port();
                                 <div class="nav-tabs-custom">
                                     <ul class="nav nav-tabs pull-right">
                                         <li class="pull-left header"><i class="fa fa-angle-right"></i> <?php echo $row['node_name']; ?></li>
-										<a class="btn btn-xs bg-orange btn-flat margin" target="_blank" href="node_qr.php?id=<?php echo $row['id']; ?>">配置信息</a>
-										<a class="btn btn-xs bg-purple btn-flat margin" href="#">状态:</a> <code><?php echo $row['node_status']; ?></code>
+										<a class="btn btn-xs bg-orange btn-flat margin" target="_blank" href="node_qr.php?id=<?php echo $row['id']; ?>">配置</a>
+										<a class="btn btn-xs bg-orange btn-flat margin" target="_blank" href="https://stats.uptimerobot.com/36QKXSxwN">状态</a>
 										<a class="btn btn-xs bg-purple btn-flat margin" href="#">在线:</a> <code><?php echo $row['node_online']; ?></code>
 										<a class="btn btn-xs bg-purple btn-flat margin" href="#">描述:</a> <code><?php echo $row['node_info']; ?></code>
                                     </ul>

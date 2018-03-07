@@ -92,12 +92,12 @@ if(!empty($_GET)){
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_order">分类(Ord、Pro、Vip)</label>
+                                <label for="cate_order">分类(Ord为普通、Pro为增强、Vip为高级)</label>
                                 <input   class="form-control" name="node_type"  value="<?php echo $rs['node_type'];?>" >
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_order">状态</label>
+                                <label for="cate_order">状态(0为不可用、1为可用)</label>
                                 <input   class="form-control" name="node_status"  value="<?php echo $rs['node_status'];?>" >
                             </div>
 
