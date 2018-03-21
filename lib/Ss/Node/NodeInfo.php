@@ -34,6 +34,10 @@ class NodeInfo extends \Ss\Etc\Db {
 
     function Type(){
         return $this->NodeArray()['node_type'];
+    }
+
+    function Status(){
+        return $this->NodeArray()['node_status'];
     }	
 	
     function Del(){
