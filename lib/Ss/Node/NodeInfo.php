@@ -32,8 +32,8 @@ class NodeInfo extends \Ss\Etc\Db {
         return $this->NodeArray()['node_obfs'];
     }
 
-    function Type(){
-        return $this->NodeArray()['node_type'];
+    function Plan(){
+        return $this->NodeArray()['node_plan'];
     }
 
     function Status(){
@@ -46,10 +46,10 @@ class NodeInfo extends \Ss\Etc\Db {
         ]);
     }
 
-    function Update($node_name,$node_type,$node_server,$node_method,$node_protocol,$node_obfs,$node_info,$node_status,$node_order){
+    function Update($node_name,$node_plan,$node_server,$node_method,$node_protocol,$node_obfs,$node_info,$node_status,$node_order){
         $this->db->update("ss_node", [
             "node_name" => $node_name,
-            "node_type" => $node_type,
+            "node_plan" => $node_plan,
             "node_server" => $node_server,
             "node_method" => $node_method,
             "node_protocol" => $node_protocol,

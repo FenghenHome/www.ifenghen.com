@@ -3,7 +3,7 @@ require_once '_main.php';
 
 if(!empty($_POST)){
     $node_name     = $_POST['node_name'];
-    $node_type     = $_POST['node_type'];
+    $node_plan     = $_POST['node_plan'];
     $node_server   = $_POST['node_server'];
     $node_method   = $_POST['node_method'];
     $node_protocol = $_POST['node_protocol'];
@@ -13,7 +13,7 @@ if(!empty($_POST)){
     $node_order    = $_POST['node_order'];
 
     $node = new Ss\Node\Node();
-    $query = $node->Add($node_name,$node_type,$node_server,$node_method,$node_protocol,$node_obfs,$node_info,$node_status,$node_order);
+    $query = $node->Add($node_name,$node_plan,$node_server,$node_method,$node_protocol,$node_obfs,$node_info,$node_status,$node_order);
     if($query){
         echo ' <script>alert("添加成功!")</script> ';
         echo " <script>window.location='node.php';</script> " ;
@@ -79,12 +79,12 @@ if(!empty($_POST)){
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_order">分类(Ord、Pro、Vip)</label>
-                                <input   class="form-control" name="node_type"  value="<?php echo $rs['node_type'];?>" >
+                                <label for="cate_order">套餐</label>
+                                <input   class="form-control" name="node_plan"  value="<?php echo $rs['node_plan'];?>" >
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_order">状态</label>
+                                <label for="cate_order">状态(0为不可用、1为可用)</label>
                                 <input   class="form-control" name="node_status"  value="<?php echo $rs['node_status'];?>" >
                             </div>
 

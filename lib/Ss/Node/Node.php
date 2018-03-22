@@ -21,10 +21,10 @@ namespace Ss\Node;
          return $node_array;
      }
 
-     function Add($node_name,$node_type,$node_server,$node_method,$node_protocol,$node_obfs,$node_info,$node_status,$node_order){
+     function Add($node_name,$node_plan,$node_server,$node_method,$node_protocol,$node_obfs,$node_info,$node_status,$node_order){
          $this->db->insert("ss_node", [
              "node_name" => $node_name,
-             "node_type" => $node_type,
+             "node_plan" => $node_plan,
              "node_server" => $node_server,
              "node_method" => $node_method,
              "node_protocol" => $node_protocol,
@@ -36,10 +36,10 @@ namespace Ss\Node;
          return 1;
      }
 
-     function NodesArray($node_type){
+     function NodesArray($user_plan){
          $node_array = $this->db->select("ss_node","*",[
              "AND" => [
-                 "node_type[<=]" => $node_type,
+                 "node_plan[<=]" => $user_plan,
                  "node_status[=]" => 1
              ],
              "ORDER" => "node_order",
