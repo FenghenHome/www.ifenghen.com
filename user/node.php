@@ -4,6 +4,7 @@ require_once '_check.php';
 $node = new Ss\Node\Node();
 $pass = $oo->get_pass();
 $port = $oo->get_port();
+$plan = $oo->get_plan();
 ?>
 
     <!-- =============================================== -->
@@ -30,7 +31,7 @@ $port = $oo->get_port();
                         </div><!-- /.box-header -->
                         <div class="box-body">
                             <?php
-                            $node0 = $node->NodesArray(Ord);
+                            $node0 = $node->NodesArray($plan);
                             foreach($node0 as $row){
                                 ?>
                                 <div class="nav-tabs-custom">

@@ -9,6 +9,7 @@ $protocol = $node->Protocol();
 $obfs = $node->Obfs();
 $pass = $oo->get_pass();
 $port = $oo->get_port();
+$plan = $oo->get_plan();
 $type = $node->Type();
 $status = $node->Status();
 $passwd = \Ss\User\Comm::base64_url_encode_pass($pass);
@@ -19,7 +20,7 @@ $ssqr = "ssr://".$url;
 ?>
 
 <?php
-if ($status>="1" && $type>="Ord") {
+if ($status>="1" && $type<=$plan) {
 ?>
 <div align="center">
     <div id="qrcode"></div>
