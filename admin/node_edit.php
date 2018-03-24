@@ -5,16 +5,17 @@ require_once '_main.php';
 if(!empty($_POST)){
     $node_id       = $_POST['node_id'];
     $node_name     = $_POST['node_name'];
-    $node_plan     = $_POST['node_plan'];
     $node_server   = $_POST['node_server'];
     $node_method   = $_POST['node_method'];
     $node_protocol = $_POST['node_protocol'];
     $node_obfs     = $_POST['node_obfs'];
     $node_info     = $_POST['node_info'];
-    $node_status   = $_POST['node_status'];
+    $node_enable   = $_POST['node_enable'];
+    $node_plan     = $_POST['node_plan'];
     $node_order    = $_POST['node_order'];
+
     $node = new \Ss\Node\NodeInfo($node_id);
-    $query = $node->Update($node_name,$node_plan,$node_server,$node_method,$node_protocol,$node_obfs,$node_info,$node_status,$node_order);
+    $query = $node->Update($node_name,$node_plan,$node_server,$node_method,$node_protocol,$node_obfs,$node_info,$node_enable,$node_order);
     if($query){
         echo ' <script>alert("更新成功!")</script> ';
         echo " <script>window.location='node.php';</script> " ;
@@ -92,17 +93,17 @@ if(!empty($_GET)){
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_order">套餐</label>
+                                <label for="cate_order">节点状态【0为未启用、1为启用】</label>
+                                <input   class="form-control" name="node_enable"  value="<?php echo $rs['node_enable'];?>" >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cate_order">套餐等级【对应switchrule.py中node_plan】</label>
                                 <input   class="form-control" name="node_plan"  value="<?php echo $rs['node_plan'];?>" >
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_order">状态(0为不可用、1为可用)</label>
-                                <input   class="form-control" name="node_status"  value="<?php echo $rs['node_status'];?>" >
-                            </div>
-
-                            <div class="form-group">
-                                <label for="cate_order">排序（对应usermysql.json中node_id）</label>
+                                <label for="cate_order">排序【对应usermysql.json中node_id】</label>
                                 <input   class="form-control" name="node_order"  value="<?php echo $rs['node_order'];?>" >
                             </div>
                         </div><!-- /.box-body -->

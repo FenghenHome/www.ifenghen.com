@@ -104,15 +104,8 @@ require_once '_check.php';
                 </li>
 
                 <li >
-                    <a href="https://status.ifenghen.com" target="_blank">
-                        <i class="fa fa-sitemap"></i> <span>节点状态</span>
-                    </a>
-                </li>
-
-
-                <li >
                     <a href="update.php">
-                        <i class="fa  fa-pencil"></i> <span>修改资料</span>
+                        <i class="fa  fa-pencil"></i> <span>修改密码</span>
                     </a>
                 </li>
 

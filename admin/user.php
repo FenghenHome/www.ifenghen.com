@@ -26,13 +26,13 @@ $Users = new Ss\User\User();
                                     <th>用户名</th>
                                     <th>邮箱</th>
                                     <th>端口</th>
-                                    <th>总流量</th>
-                                    <th>剩余流量</th>
-                                    <th>已使用流量</th>
-                                    <th>是否启用</th>
-                                    <th>套餐</th>
-                                    <th>到期时间</th>
-                                    <th>剩余时间</th>
+                                    <th>总</th>
+                                    <th>剩余</th>
+                                    <th>已使用</th>
+                                    <th>状态</th>
+                                    <th>等级</th>
+                                    <th>到期</th>
+                                    <th>剩余</th>
                                     <th>邀请人</th>
                                     <th>操作</th>
                                 </tr>
@@ -58,7 +58,7 @@ if ($user_enable == "1"){
 echo $show_enable;
 ?>
                                         </td>
-                                        <td><?php echo $rs['plan']; ?></td>
+                                        <td><?php echo $rs['plan']; ?>级</td>
                                         <td>
 <?php
 $user_expire_time = $rs['expire_time'];

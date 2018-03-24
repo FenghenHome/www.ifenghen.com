@@ -60,7 +60,7 @@ $node_online = $ssmin->nodeonlineCount();
                         <div class="icon">
                             <i class="ion ion-cloud"></i>
                         </div>
-                        <a href="https://status.ifenghen.com" class="small-box-footer">
+                        <a href="https://stats.uptimerobot.com/36QKXSxwN" class="small-box-footer">
                             状态 <i class="fa fa-arrow-circle-right"></i>
                         </a>
                     </div>

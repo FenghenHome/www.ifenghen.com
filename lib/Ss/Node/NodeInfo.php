@@ -37,7 +37,7 @@ class NodeInfo extends \Ss\Etc\Db {
     }
 
     function Status(){
-        return $this->NodeArray()['node_status'];
+        return $this->NodeArray()['node_enable'];
     }	
 	
     function Del(){
@@ -46,7 +46,7 @@ class NodeInfo extends \Ss\Etc\Db {
         ]);
     }
 
-    function Update($node_name,$node_plan,$node_server,$node_method,$node_protocol,$node_obfs,$node_info,$node_status,$node_order){
+    function Update($node_name,$node_plan,$node_server,$node_method,$node_protocol,$node_obfs,$node_info,$node_enable,$node_order){
         $this->db->update("ss_node", [
             "node_name" => $node_name,
             "node_plan" => $node_plan,
@@ -55,7 +55,7 @@ class NodeInfo extends \Ss\Etc\Db {
             "node_protocol" => $node_protocol,
             "node_obfs" => $node_obfs,
             "node_info" => $node_info,
-            "node_status" => $node_status,
+            "node_enable" => $node_enable,
             "node_order" =>  $node_order
         ],[
             "id[=]"  => $this->id

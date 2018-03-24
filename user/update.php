@@ -8,7 +8,7 @@ require_once '_main.php'; ?>
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                信息更新
+                密码更新
                 <small>Profile Update</small>
             </h1>
         </section>

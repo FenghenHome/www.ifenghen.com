@@ -26,13 +26,12 @@ $node = new Ss\Node\Node();
                                 <tr>
                                     <th>ID</th>
                                     <th>节点</th>
-                                    <th>套餐</th>
                                     <th>加密</th>
                                     <th>协议</th>
                                     <th>混淆</th>
+                                    <th>状态</th>
                                     <th>在线</th>
-                                    <th>描述</th>
-                                    <th>排序</th>
+                                    <th>套餐</th>
                                     <th>操作</th>
                                 </tr>
                                 <?php
@@ -42,13 +41,22 @@ $node = new Ss\Node\Node();
                                     <tr>
                                         <td>#<?php echo $rs['id']; ?></td>
                                         <td> <?php echo $rs['node_name']; ?></td>
-                                        <td> <?php echo $rs['node_plan']; ?></td>
                                         <td> <?php echo $rs['node_method']; ?></td>
                                         <td> <?php echo $rs['node_protocol']; ?></td>
                                         <td> <?php echo $rs['node_obfs']; ?></td>
-                                        <td><?php echo $rs['node_online']; ?></td>
-                                        <td><?php echo $rs['node_info']; ?></td>
-                                        <td><?php echo $rs['node_order']; ?></td>
+                                        <td>
+<?php
+$node_enable = $rs['node_enable'];
+if ($node_enable == "1"){
+    $show_enable = "启用";
+} else {
+    $show_enable = "禁用";
+}
+echo $show_enable;
+?>
+                                        </td>
+                                        <td><?php echo $rs['node_online']; ?>人</td>
+                                        <td><?php echo $rs['node_plan']; ?>级</td>
                                         <td>
                                             <a class="btn btn-info btn-sm" href="node_edit.php?id=<?php echo $rs['id']; ?>">编辑</a>
                                             <a class="btn btn-danger btn-sm" href="node_del.php?id=<?php echo $rs['id']; ?>">删除</a>

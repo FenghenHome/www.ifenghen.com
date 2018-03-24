@@ -93,20 +93,7 @@ if ($user_enable == "1"){
 echo $show_enable;
 ?>
                             </code> </p>
-                        </div><!-- /.box-body -->
-                    </div><!-- /.box -->
-                </div><!-- /.col (left) -->
-
-                <div class="col-md-6">
-                    <div class="box box-solid">
-                        <div class="box-header">
-                            <i class="fa fa-th-list"></i>
-                            <h3 class="box-title">套餐情况</h3>
-                        </div><!-- /.box-header -->
-                        <div class="box-body">
-                            <p> 当前套餐：<code><?php echo $oo->get_plan();?></code> </p>
-                            <p> A：<code>可以使用普通节点+增强节点</code></p>
-                            <p> B：<code>只能使用普通节点</code></p>
+			    <p> 套餐等级：<code><?php echo $oo->get_plan();?>级</code> </p>
                         </div><!-- /.box-body -->
                     </div><!-- /.box -->
                 </div><!-- /.col (left) -->
