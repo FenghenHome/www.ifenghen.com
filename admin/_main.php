@@ -60,9 +60,6 @@ require_once '_check.php';
                                 </p>
                             </li>
                             <li class="user-footer">
-                                <div class="pull-left">
-                                    <a href="my.php" class="btn btn-default btn-flat">个人信息</a>
-                                </div>
                                 <div class="pull-right">
                                     <a href="logout.php" class="btn btn-default btn-flat">退出</a>
                                 </div>

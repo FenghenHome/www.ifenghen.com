@@ -27,7 +27,7 @@ $user_plan = $oo->get_plan();
                     <div class="box box-solid">
                         <div class="box-header">
                             <i class="fa fa-th-list"></i>
-                            <h3 class="box-title">信息</h3>
+                            <h3 class="box-title">配置</h3>
                         </div><!-- /.box-header -->
                         <div class="box-body">
                             <?php
@@ -40,7 +40,7 @@ $user_plan = $oo->get_plan();
 					<a class="btn btn-xs bg-orange btn-flat margin" target="_blank" href="node_qr.php?id=<?php echo $row['id']; ?>">二维码</a>
 					<a class="btn btn-xs bg-purple btn-flat margin"> <?php echo $row['node_online']; ?>人在线</a>
 					<a class="btn btn-xs bg-orange btn-flat margin" target="_blank" href="https://stats.uptimerobot.com/36QKXSxwN">状态</a>
-					<a class="btn btn-xs bg-purple btn-flat margin">描述:</a> <code><?php echo $row['node_info']; ?></code>
+					<a class="btn btn-xs bg-purple btn-flat margin">推荐:</a> <code><?php echo $row['node_info']; ?></code>
                                     </ul>
                                 </div><!-- nav-tabs-custom -->
                             <?php }?>

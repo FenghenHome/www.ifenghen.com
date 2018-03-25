@@ -72,9 +72,8 @@ $show_unused_time = round(($unix_expire_time-$unix_now_time)/3600/24);
                             </div>
                             <p> 可用流量：<?php echo $all_transfer ."GB";?> </p>
                             <p> 剩余流量：<code><?php echo  $unused_transfer."GB";?></code> </p>
-                            <p> 到期时间：<?php echo $show_expire_time;?> </p>
-                            <p> 剩余时间：<code>
-<?php
+                            <p> 到期时间：<code><?php echo $show_expire_time;?></code> </p>
+                            <p> 剩余时间：<code><?php
 if ($unix_expire_time-$unix_now_time >= "1"){
     echo $show_unused_time."天";
 } else {
@@ -82,8 +81,7 @@ if ($unix_expire_time-$unix_now_time >= "1"){
 }
 ?>
                             </code> </p>
-			    <p> 账号状态：<code>
-<?php
+			    <p> 账号状态：<code><?php
 $user_enable = $oo->get_enable();
 if ($user_enable == "1"){
     $show_enable = "启用";

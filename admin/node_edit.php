@@ -88,7 +88,7 @@ if(!empty($_GET)){
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_title">节点描述</label>
+                                <label for="cate_title">推荐线路</label>
                                 <input  class="form-control" name="node_info" value="<?php echo $rs['node_info'];?>" >
                             </div>
 
