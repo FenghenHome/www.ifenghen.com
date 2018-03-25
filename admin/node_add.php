@@ -79,7 +79,7 @@ if(!empty($_POST)){
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_order">节点状态<code>[0为未启用、1为启用]</code></label>
+                                <label for="cate_order">节点状态<code>[0为禁用、1为启用]</code></label>
                                 <input   class="form-control" name="node_enable"  value="<?php echo $rs['node_enable'];?>" >
                             </div>
 

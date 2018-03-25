@@ -67,13 +67,13 @@ if(!empty($_GET)){
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_title">用户状态<code>[0为未启用、1为启用]</code></label>
+                                <label for="cate_title">用户状态<code>[0为禁用、1为启用]</code></label>
 
                                 <input  class="form-control" id="enable"  value="<?php echo $rs['enable'];?>"  >
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_title">用户等级<code>[参考节点等级]</code></label>
+                                <label for="cate_title">用户等级<code>[参照节点等级]</code></label>
 
                                 <input  class="form-control" id="plan"  value="<?php echo $rs['plan'];?>"  >
                             </div>
