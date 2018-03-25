@@ -17,8 +17,8 @@ $node_online = $ssmin->nodeonlineCount();
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                用户中心
-                <small>User Center</small>
+                管理中心
+                <small>Manage Center</small>
             </h1>
         </section>
 
@@ -71,10 +71,10 @@ $node_online = $ssmin->nodeonlineCount();
                     <div class="small-box bg-aqua">
                         <div class="inner">
                             <h3>
-                                <?php  echo $all_user; ?>(<?php  echo $node_online; ?>)
+                                <?php  echo $all_user; ?>[<?php  echo $node_online; ?>]
                             </h3>
                             <p>
-                                用户(在线)
+                                用户[在线]
                             </p>
                         </div>
                         <div class="icon">

@@ -93,17 +93,17 @@ if(!empty($_GET)){
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_order">节点状态【0为未启用、1为启用】</label>
+                                <label for="cate_order">节点状态<code>[0为未启用、1为启用]</code></label>
                                 <input   class="form-control" name="node_enable"  value="<?php echo $rs['node_enable'];?>" >
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_order">套餐等级【对应switchrule.py中node_plan】</label>
+                                <label for="cate_order">节点等级<code>[对应switchrule.py中node_plan]</code></label>
                                 <input   class="form-control" name="node_plan"  value="<?php echo $rs['node_plan'];?>" >
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_order">排序【对应usermysql.json中node_id】</label>
+                                <label for="cate_order">排序<code>[对应usermysql.json中node_id]</code></label>
                                 <input   class="form-control" name="node_order"  value="<?php echo $rs['node_order'];?>" >
                             </div>
                         </div><!-- /.box-body -->

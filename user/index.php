@@ -61,7 +61,7 @@ $show_unused_time = round(($unix_expire_time-$unix_now_time)/3600/24);
                     <div class="box box-solid">
                         <div class="box-header">
                             <i class="fa fa-th-list"></i>
-                            <h3 class="box-title">账号情况</h3>
+                            <h3 class="box-title">详情</h3>
                         </div><!-- /.box-header -->
                         <div class="box-body">
                             <p> 已用流量：<?php echo $transfers."MB";?> </p>
@@ -70,7 +70,7 @@ $show_unused_time = round(($unix_expire_time-$unix_now_time)/3600/24);
                                     <span class="sr-only">Transfer</span>
                                 </div>
                             </div>
-                            <p> 可用流量：<?php echo $all_transfer ."GB";?> </p>
+                            <p> 总流量：<?php echo $all_transfer ."GB";?> </p>
                             <p> 剩余流量：<code><?php echo  $unused_transfer."GB";?></code> </p>
                             <p> 到期时间：<code><?php echo $show_expire_time;?></code> </p>
                             <p> 剩余时间：<code><?php
@@ -81,7 +81,7 @@ if ($unix_expire_time-$unix_now_time >= "1"){
 }
 ?>
                             </code> </p>
-			    <p> 账号状态：<code><?php
+			    <p> 状态：<code><?php
 $user_enable = $oo->get_enable();
 if ($user_enable == "1"){
     $show_enable = "启用";
@@ -91,7 +91,7 @@ if ($user_enable == "1"){
 echo $show_enable;
 ?>
                             </code> </p>
-			    <p> 套餐等级：<code><?php echo $oo->get_plan();?>级</code> </p>
+			    <p> 等级：<code><?php echo $oo->get_plan();?>级</code> </p>
                         </div><!-- /.box-body -->
                     </div><!-- /.box -->
                 </div><!-- /.col (left) -->

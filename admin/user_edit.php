@@ -51,7 +51,7 @@ if(!empty($_GET)){
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_title">SS连接密码</label>
+                                <label for="cate_title">连接密码</label>
                                 <input  class="form-control" id="passwd" value="<?php echo $rs['passwd'];?>" >
                             </div>
 
@@ -67,13 +67,13 @@ if(!empty($_GET)){
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_title">账号状态【0为未启用、1为启用】</label>
+                                <label for="cate_title">用户状态<code>[0为未启用、1为启用]</code></label>
 
                                 <input  class="form-control" id="enable"  value="<?php echo $rs['enable'];?>"  >
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_title">套餐等级</label>
+                                <label for="cate_title">用户等级<code>[参考节点等级]</code></label>
 
                                 <input  class="form-control" id="plan"  value="<?php echo $rs['plan'];?>"  >
                             </div>

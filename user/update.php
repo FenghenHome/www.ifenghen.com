@@ -9,7 +9,7 @@ require_once '_main.php'; ?>
         <section class="content-header">
             <h1>
                 密码更新
-                <small>Profile Update</small>
+                <small>Password Update</small>
             </h1>
         </section>
 
