@@ -36,9 +36,21 @@ class NodeInfo extends \Ss\Etc\Db {
         return $this->NodeArray()['node_plan'];
     }
 
-    function Status(){
+    function Enable(){
         return $this->NodeArray()['node_enable'];
     }	
+
+    function Obfsparam(){
+        return $this->NodeArray()['node_obfsparam'];
+    }
+
+    function Port(){
+        return $this->NodeArray()['node_port'];
+    }
+
+    function Passwd(){
+        return $this->NodeArray()['node_passwd'];
+    }
 	
     function Del(){
         $this->db->delete($this->table,[
@@ -46,7 +58,7 @@ class NodeInfo extends \Ss\Etc\Db {
         ]);
     }
 
-    function Update($node_name,$node_plan,$node_server,$node_method,$node_protocol,$node_obfs,$node_info,$node_enable,$node_order){
+    function Update($node_name,$node_plan,$node_server,$node_method,$node_protocol,$node_obfs,$node_info,$node_enable,$node_order,$node_obfsparam,$node_port,$node_passwd){
         $this->db->update("ss_node", [
             "node_name" => $node_name,
             "node_plan" => $node_plan,
@@ -56,7 +68,10 @@ class NodeInfo extends \Ss\Etc\Db {
             "node_obfs" => $node_obfs,
             "node_info" => $node_info,
             "node_enable" => $node_enable,
-            "node_order" =>  $node_order
+            "node_order" =>  $node_order,
+            "node_obfsparam" =>  $node_obfsparam,
+            "node_port" =>  $node_port,
+            "node_passwd" =>  $node_passwd
         ],[
             "id[=]"  => $this->id
         ]);

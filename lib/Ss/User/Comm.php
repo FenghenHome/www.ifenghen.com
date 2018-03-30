@@ -5,14 +5,8 @@ namespace Ss\User;
 
 class Comm {
 
-    static function base64_url_encode_pass($pass) {
-        $data = base64_encode($pass);
-        $data = str_replace(array('+','/','='),array('-','_',''),$data);
-        return $data;
-    }
-
-    static function base64_url_encode1_url($ssurl) {
-        $data = base64_encode($ssurl);
+    static function base64_url_encode($str) {
+        $data = base64_encode($str);
         $data = str_replace(array('+','/','='),array('-','_',''),$data);
         return $data;
     }
@@ -50,7 +44,7 @@ class Comm {
     //Gravatar
     static function Gravatar( $email, $s = 80, $d = 'mm', $r = 'g', $img = false, $atts = array() ) {
         //$url = 'http://gravatar.duoshuo.com/avatar/';
-        $url = 'https://gravatar.cat.net/avatar/';
+        $url = 'https://gravatar.loli.net/avatar/';
         $url .= md5( strtolower( trim( $email ) ) );
         $url .= "?s=$s&d=$d&r=$r";
         if ( $img ) {

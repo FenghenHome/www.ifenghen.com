@@ -2,9 +2,8 @@
 require_once '_main.php';
 require_once '_check.php';
 $node = new Ss\Node\Node();
-$pass = $oo->get_pass();
-$port = $oo->get_port();
 $user_plan = $oo->get_plan();
+$user_enable = $oo->get_enable();
 ?>
 
     <!-- =============================================== -->
@@ -31,7 +30,7 @@ $user_plan = $oo->get_plan();
                         </div><!-- /.box-header -->
                         <div class="box-body">
                             <?php
-                            $node0 = $node->NodesArray($user_plan);
+                            $node0 = $node->NodesArray($user_plan,$user_enable);
                             foreach($node0 as $row){
                                 ?>
                                 <div class="nav-tabs-custom">
