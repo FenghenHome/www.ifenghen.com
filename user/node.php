@@ -28,22 +28,24 @@ $user_enable = $oo->get_enable();
                             <i class="fa fa-th-list"></i>
                             <h3 class="box-title">配置</h3>
                         </div><!-- /.box-header -->
-                        <div class="box-body">
-                            <?php
-                            $node0 = $node->NodesArray($user_plan,$user_enable);
-                            foreach($node0 as $row){
-                                ?>
-                                <div class="nav-tabs-custom">
-                                    <ul class="nav nav-tabs pull-right">
-                                        <li class="pull-left header"><i class="fa fa-angle-right"></i> <?php echo $row['node_name']; ?></li>
-					<a class="btn btn-xs bg-orange btn-flat margin" target="_blank" href="node_qr.php?id=<?php echo $row['id']; ?>">二维码</a>
-					<a class="btn btn-xs bg-purple btn-flat margin"> <?php echo $row['node_online']; ?>人在线</a>
-					<a class="btn btn-xs bg-orange btn-flat margin" target="_blank" href="https://stats.uptimerobot.com/36QKXSxwN">状态</a>
-					<a class="btn btn-xs bg-purple btn-flat margin">推荐:</a> <code><?php echo $row['node_info']; ?></code>
-                                    </ul>
-                                </div><!-- nav-tabs-custom -->
-                            <?php }?>
-                        </div><!-- /.box-body -->
+                        <?php if ($user_enable>="1") { ?>
+                            <div class="box-body">
+                                <?php
+                                $node0 = $node->NodesArray($user_plan);
+                                foreach($node0 as $row){
+                                    ?>
+                                    <div class="nav-tabs-custom">
+                                        <ul class="nav nav-tabs pull-right">
+                                            <li class="pull-left header"><i class="fa fa-angle-right"></i> <?php echo $row['node_name']; ?></li>
+                                            <a class="btn btn-xs bg-orange btn-flat margin" target="_blank" href="node_qr.php?id=<?php echo $row['id']; ?>">二维码</a>
+                                            <a class="btn btn-xs bg-purple btn-flat margin"> <?php echo $row['node_online']; ?>人在线</a>
+                                            <a class="btn btn-xs bg-orange btn-flat margin" target="_blank" href="https://stats.uptimerobot.com/36QKXSxwN">状态</a>
+                                            <a class="btn btn-xs bg-purple btn-flat margin">推荐:</a> <code><?php echo $row['node_info']; ?></code>
+                                        </ul>
+                                    </div><!-- nav-tabs-custom -->
+                                <?php } ?>
+                            </div><!-- /.box-body -->
+                        <?php } ?>
                     </div><!-- /.box -->
                 </div><!-- /.col (left) -->
 

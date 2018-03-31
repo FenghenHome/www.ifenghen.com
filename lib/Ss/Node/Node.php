@@ -36,17 +36,15 @@ namespace Ss\Node;
          return 1;
      }
 
-     function NodesArray($user_plan,$user_enable){
-	 if ($user_enable>="1") {
-             $node_array = $this->db->select("ss_node","*",[
-                 "AND" => [
-                     "node_plan[<=]" => $user_plan,
-                     "node_enable[=]" => 1
-                 ],
-                 "ORDER" => "node_order",
-                 //"LIMIT" => 21
-             ]);
-             return $node_array;
-	 }
+     function NodesArray($user_plan){
+         $node_array = $this->db->select("ss_node","*",[
+             "AND" => [
+                 "node_plan[<=]" => $user_plan,
+                 "node_enable[=]" => 1
+             ],
+             "ORDER" => "node_order",
+             //"LIMIT" => 21
+         ]);
+         return $node_array;
      }
 }

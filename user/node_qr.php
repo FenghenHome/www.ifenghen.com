@@ -27,9 +27,7 @@ $url = \Ss\User\Comm::base64_url_encode($ssrurl);
 $ssqr = "ssr://".$url;
 ?>
 
-<?php
-if ($node_enable>="1" && $user_enable>="1" && $node_plan<=$user_plan) {
-?>
+<?php if ($node_enable>="1" && $user_enable>="1" && $node_plan<=$user_plan) { ?>
 <div align="center">
     <a href="http://api.qrserver.com/v1/create-qr-code/?size=300x300&data=<?php echo $ssqr; ?>" rel="nofollow" target="_blank"><div id="qrcode"></div></a>
 </div>
@@ -47,15 +45,13 @@ if ($node_enable>="1" && $user_enable>="1" && $node_plan<=$user_plan) {
 <tr><td>SSR链接</td><td><a href="<?php echo $ssqr; ?>" rel="nofollow" target="_blank">获取</a></td></tr>
 </table>
 </p>
-<?php
-}
-?>
 
 <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
 <script>
     jQuery('#qrcode').qrcode("<?php echo $ssqr;?>");
 </script>
+<?php } else { header("Location:index.php"); } ?>
 
 
 
