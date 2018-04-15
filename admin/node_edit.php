@@ -3,19 +3,22 @@ require_once '_main.php';
 
 //更新
 if(!empty($_POST)){
-    $node_id       = $_POST['node_id'];
-    $node_name     = $_POST['node_name'];
-    $node_server   = $_POST['node_server'];
-    $node_method   = $_POST['node_method'];
-    $node_protocol = $_POST['node_protocol'];
-    $node_obfs     = $_POST['node_obfs'];
-    $node_info     = $_POST['node_info'];
-    $node_enable   = $_POST['node_enable'];
-    $node_plan     = $_POST['node_plan'];
-    $node_order    = $_POST['node_order'];
+    $node_id        = $_POST['node_id'];
+    $node_name      = $_POST['node_name'];
+    $node_server    = $_POST['node_server'];
+    $node_method    = $_POST['node_method'];
+    $node_protocol  = $_POST['node_protocol'];
+    $node_obfs      = $_POST['node_obfs'];
+    $node_info      = $_POST['node_info'];
+    $node_enable    = $_POST['node_enable'];
+    $node_plan      = $_POST['node_plan'];
+    $node_order     = $_POST['node_order'];
+    $node_obfsparam = $_POST['node_obfsparam'];
+    $node_port      = $_POST['node_port'];
+    $node_passwd    = $_POST['node_passwd'];
 
     $node = new \Ss\Node\NodeInfo($node_id);
-    $query = $node->Update($node_name,$node_plan,$node_server,$node_method,$node_protocol,$node_obfs,$node_info,$node_enable,$node_order);
+    $query = $node->Update($node_name,$node_plan,$node_server,$node_method,$node_protocol,$node_obfs,$node_info,$node_enable,$node_order,$node_obfsparam,$node_port,$node_passwd);
     if($query){
         echo ' <script>alert("更新成功!")</script> ';
         echo " <script>window.location='node.php';</script> " ;
@@ -63,17 +66,27 @@ if(!empty($_GET)){
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_title">节点名字</label>
+                                <label for="cate_title">名字</label>
                                 <input  class="form-control" name="node_name" value="<?php echo $rs['node_name'];?>" >
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_title">节点地址</label>
+                                <label for="cate_title">地址</label>
                                 <input  class="form-control" name="node_server" value="<?php echo $rs['node_server'];?>" >
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_method">加密方式</label>
+                                <label for="cate_order">端口<code>[对应user-config.json中additional_ports的端口]</code></label>
+                                <input   class="form-control" name="node_port"  value="<?php echo $rs['node_port'];?>" >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cate_order">密码<code>[对应user-config.json中additional_ports的端口密码]</code></label>
+                                <input   class="form-control" name="node_passwd"  value="<?php echo $rs['node_passwd'];?>" >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cate_method">加密</label>
                                 <input  class="form-control" name="node_method" value="<?php echo $rs['node_method'];?>" >
                             </div>
 
@@ -88,17 +101,12 @@ if(!empty($_GET)){
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_title">推荐线路</label>
-                                <input  class="form-control" name="node_info" value="<?php echo $rs['node_info'];?>" >
+                                <label for="cate_order">混淆参数<code>[对应user-config.json中redirect]</code></label>
+                                <input   class="form-control" name="node_obfsparam"  value="<?php echo $rs['node_obfsparam'];?>" >
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_order">节点状态<code>[0为禁用、1为启用]</code></label>
-                                <input   class="form-control" name="node_enable"  value="<?php echo $rs['node_enable'];?>" >
-                            </div>
-
-                            <div class="form-group">
-                                <label for="cate_order">节点等级<code>[对应switchrule.py中node_plan]</code></label>
+                                <label for="cate_order">等级<code>[对应switchrule.py中node_plan]</code></label>
                                 <input   class="form-control" name="node_plan"  value="<?php echo $rs['node_plan'];?>" >
                             </div>
 
@@ -106,8 +114,17 @@ if(!empty($_GET)){
                                 <label for="cate_order">排序<code>[对应usermysql.json中node_id]</code></label>
                                 <input   class="form-control" name="node_order"  value="<?php echo $rs['node_order'];?>" >
                             </div>
-                        </div><!-- /.box-body -->
 
+                            <div class="form-group">
+                                <label for="cate_order">状态<code>[0为禁用、1为启用]</code></label>
+                                <input   class="form-control" name="node_enable"  value="<?php echo $rs['node_enable'];?>" >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cate_title">线路</label>
+                                <input  class="form-control" name="node_info" value="<?php echo $rs['node_info'];?>" >
+                            </div>
+                        </div><!-- /.box-body -->
                         <div class="box-footer">
                             <button type="submit" name="action" value="edit" class="btn btn-primary">修改</button>
                         </div>

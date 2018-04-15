@@ -21,7 +21,7 @@ namespace Ss\Node;
          return $node_array;
      }
 
-     function Add($node_name,$node_plan,$node_server,$node_method,$node_protocol,$node_obfs,$node_info,$node_enable,$node_order){
+     function Add($node_name,$node_plan,$node_server,$node_method,$node_protocol,$node_obfs,$node_info,$node_enable,$node_order,$node_obfsparam,$node_port,$node_passwd){
          $this->db->insert("ss_node", [
              "node_name" => $node_name,
              "node_plan" => $node_plan,
@@ -31,7 +31,10 @@ namespace Ss\Node;
              "node_obfs" => $node_obfs,
              "node_info" => $node_info,
              "node_enable" => $node_enable,
-             "node_order" =>  $node_order
+             "node_order" =>  $node_order,
+             "node_obfsparam" =>  $node_obfsparam,
+             "node_port" =>  $node_port,
+             "node_passwd" =>  $node_passwd
          ]);
          return 1;
      }

@@ -40,7 +40,7 @@ $user_enable = $oo->get_enable();
                                             <a class="btn btn-xs bg-orange btn-flat margin" target="_blank" href="node_qr.php?id=<?php echo $row['id']; ?>">二维码</a>
                                             <a class="btn btn-xs bg-purple btn-flat margin"> <?php echo $row['node_online']; ?>人在线</a>
                                             <a class="btn btn-xs bg-orange btn-flat margin" target="_blank" href="https://stats.uptimerobot.com/36QKXSxwN">状态</a>
-                                            <a class="btn btn-xs bg-purple btn-flat margin">推荐:</a> <code><?php echo $row['node_info']; ?></code>
+                                            <a class="btn btn-xs bg-purple btn-flat margin">推荐线路:</a> <code><?php echo $row['node_info']; ?></code>
                                         </ul>
                                     </div><!-- nav-tabs-custom -->
                                 <?php } ?>
