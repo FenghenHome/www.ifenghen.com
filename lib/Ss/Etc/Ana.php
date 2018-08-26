@@ -21,6 +21,13 @@ class Ana extends Db {
         return $mt;
     }
 
+    function getTrafficTB(){
+        $mt = $this->getMonthTraffic();
+        $mt = Comm::toTB($mt);
+        $mt = round($mt,3);
+        return $mt;
+    }
+
     //统计用户
     function allUserCount(){
         $c = $this->db->count("user","uid");

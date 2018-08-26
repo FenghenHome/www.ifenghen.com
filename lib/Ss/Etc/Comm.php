@@ -8,7 +8,7 @@ class Comm {
 
     private $kb = 1024, $mb = 1048576, $gb = 1073741824;
 
-    // to kb mb gb
+    // to kb mb gb tb
     static function toKB($value){
         return $value/1024;
     }
@@ -21,6 +21,9 @@ class Comm {
         return $value/(1024*1024*1024);
     }
 
+    static function toTB($value){
+        return $value/(1024*1024*1024*1024);
+    }
 
     //Gravatar
     static function get_gravatar( $email, $s = 80, $d = 'mm', $r = 'g', $img = false, $atts = array() ) {
@@ -60,8 +63,12 @@ class Comm {
      */
 
     static function flowAutoShow($value){
-        global $tokb, $tomb, $togb;
-        if ($value > $togb) {
+        global $tokb, $tomb, $togb, $totb;
+        if ($value > $totb) {
+            echo round($value/$totb, 2);
+            echo "TB";
+        }
+        else if ($value > $togb) {
             echo round($value/$togb, 2);
             echo "GB";
         }

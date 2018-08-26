@@ -8,13 +8,12 @@ if($oo->get_transfer()<1000000)
 
 }
 //计算流量并保留2位小数
-$all_transfer = $oo->get_transfer_enable()/$togb;
-$unused_transfer =  $oo->unused_transfer()/$togb;
+$all_transfer = $oo->get_transfer_enable();
+$unused_transfer =  $oo->unused_transfer();
 $used_100 = $oo->get_transfer()/$oo->get_transfer_enable();
 $used_100 = round($used_100,2);
 $used_100 = $used_100*100;
 //计算流量并保留2位小数
-$transfers = $transfers/$tomb;
 $transfers = round($transfers,2);
 $all_transfer = round($all_transfer,2);
 $unused_transfer = round($unused_transfer,2);
@@ -64,14 +63,14 @@ $show_unused_time = round(($unix_expire_time-$unix_now_time)/3600/24);
                             <h3 class="box-title">详情</h3>
                         </div><!-- /.box-header -->
                         <div class="box-body">
-                            <p> 已用流量：<?php echo $transfers."MB";?> </p>
+                            <p> 已用流量：<?php \Ss\Etc\Comm::flowAutoShow($transfers); ?> </p>
                             <div class="progress progress-striped">
                                 <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $used_100; ?>%">
                                     <span class="sr-only">Transfer</span>
                                 </div>
                             </div>
-                            <p> 总流量：<?php echo $all_transfer ."GB";?> </p>
-                            <p> 剩余流量：<code><?php echo  $unused_transfer."GB";?></code> </p>
+                            <p> 总流量：<?php \Ss\Etc\Comm::flowAutoShow($all_transfer); ?> </p>
+                            <p> 剩余流量：<code><?php \Ss\Etc\Comm::flowAutoShow($unused_transfer); ?></code> </p>
                             <p> 到期时间：<code><?php echo $show_expire_time;?></code> </p>
                             <p> 剩余时间：<code><?php
 if ($unix_expire_time-$unix_now_time >= "1"){

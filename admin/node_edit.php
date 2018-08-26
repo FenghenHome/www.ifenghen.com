@@ -76,13 +76,13 @@ if(!empty($_GET)){
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_order">端口<code>[对应user-config.json中additional_ports的端口]</code></label>
-                                <input   class="form-control" name="node_port"  value="<?php echo $rs['node_port'];?>" >
+                                <label for="cate_order">端口</label>
+                                <input   class="form-control" name="node_port"  value="<?php echo $rs['node_port'];?>" placeholder="对应user-config.json中additional_ports的端口" >
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_order">密码<code>[对应user-config.json中additional_ports的端口密码]</code></label>
-                                <input   class="form-control" name="node_passwd"  value="<?php echo $rs['node_passwd'];?>" >
+                                <label for="cate_order">密码</label>
+                                <input   class="form-control" name="node_passwd"  value="<?php echo $rs['node_passwd'];?>" placeholder="对应user-config.json中additional_ports的端口密码" >
                             </div>
 
                             <div class="form-group">
@@ -101,23 +101,23 @@ if(!empty($_GET)){
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_order">混淆参数<code>[对应user-config.json中redirect]</code></label>
-                                <input   class="form-control" name="node_obfsparam"  value="<?php echo $rs['node_obfsparam'];?>" >
+                                <label for="cate_order">混淆参数</label>
+                                <input   class="form-control" name="node_obfsparam"  value="<?php echo $rs['node_obfsparam'];?>" placeholder="对应user-config.json中redirect的参数" >
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_order">等级<code>[对应switchrule.py中node_plan]</code></label>
-                                <input   class="form-control" name="node_plan"  value="<?php echo $rs['node_plan'];?>" >
+                                <label for="cate_order">等级</label>
+                                <input   class="form-control" name="node_plan"  value="<?php echo $rs['node_plan'];?>" placeholder="对应switchrule.py中node_plan的参数" >
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_order">排序<code>[对应usermysql.json中node_id]</code></label>
-                                <input   class="form-control" name="node_order"  value="<?php echo $rs['node_order'];?>" >
+                                <label for="cate_order">排序</label>
+                                <input   class="form-control" name="node_order"  value="<?php echo $rs['node_order'];?>" placeholder="节点显示顺序" >
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_order">状态<code>[0为禁用、1为启用]</code></label>
-                                <input   class="form-control" name="node_enable"  value="<?php echo $rs['node_enable'];?>" >
+                                <label for="cate_order">状态</label>
+                                <input   class="form-control" name="node_enable"  value="<?php echo $rs['node_enable'];?>" placeholder="0为禁用、1为启用" >
                             </div>
 
                             <div class="form-group">

@@ -2,7 +2,6 @@
 require_once '_main.php';
 $ssmin = new \Ss\Etc\Ana();
 $mt = $ssmin->getMonthTraffic();
-$mt = $mt/$togb;
 $mt = round($mt,3);
 $active_user = $ssmin->activedUserCount();
 $all_user = $ssmin->allUserCount();

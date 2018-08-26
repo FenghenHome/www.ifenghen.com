@@ -67,15 +67,15 @@ if(!empty($_GET)){
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_title">用户状态<code>[0为禁用、1为启用]</code></label>
+                                <label for="cate_title">用户状态</label>
 
-                                <input  class="form-control" id="enable"  value="<?php echo $rs['enable'];?>"  >
+                                <input  class="form-control" id="enable"  value="<?php echo $rs['enable'];?>" placeholder="0为禁用、1为启用" >
                             </div>
 
                             <div class="form-group">
-                                <label for="cate_title">用户等级<code>[参照节点等级]</code></label>
+                                <label for="cate_title">用户等级</label>
 
-                                <input  class="form-control" id="plan"  value="<?php echo $rs['plan'];?>"  >
+                                <input  class="form-control" id="plan"  value="<?php echo $rs['plan'];?>" placeholder="参照节点等级" >
                             </div>
 
                             <div class="form-group">
